@@ -1,0 +1,52 @@
+# ==============================================================================
+# 🤖 DEPENDABOT CONFIGURATION
+# ==============================================================================
+# Automatically checks for dependency updates and opens pull requests.
+# Documentation: https://docs.github.com/en/code-security/dependabot
+
+version: 2
+updates:
+  # 1. npm dependencies (weekly check)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+      - "automated pr"
+
+  # 2. GitHub Actions workflows (weekly check)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci(actions)"
+    labels:
+      - "ci"
+      - "automated pr"
+
+  # 3. Dockerfile base images (weekly check)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "docker(deps)"
+    labels:
+      - "docker"
+      - "automated pr"
