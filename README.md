@@ -3,12 +3,23 @@
 > **A high-performance personal developer blog, digital garden, and portfolio template crafted with Astro 7, Tailwind CSS 4, strict TypeScript, and an ultra-tactile Liquid Glass Dark UI.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-indigo.svg)](./LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-00DC82.svg?style=flat&logo=netlify&logoColor=white)](https://devblogsite.netlify.app)
 [![Built with Astro](https://img.shields.io/badge/Astro-7.2-ff5d01.svg)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg)](https://tailwindcss.com)
 [![Pagefind](https://img.shields.io/badge/Search-Pagefind-818cf8.svg)](https://pagefind.app)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ed.svg)](https://www.docker.com)
 [![CI](https://img.shields.io/badge/CI-Passing-success.svg?logo=github-actions)](./.github/workflows/ci.yml)
 [![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-0366d6.svg?logo=dependabot)](./.github/dependabot.yml)
+
+---
+
+## 🚀 Live Preview & Demo
+
+Experience the template live in action:
+
+👉 **[https://devlog-astro-template.netlify.app](https://devlog-astro-template.netlify.app)**
+
+> ✨ *Features interactive MDX components, lightning-fast static Pagefind search, full RSS feed, and custom 404 page routing.*
 
 ---
 
