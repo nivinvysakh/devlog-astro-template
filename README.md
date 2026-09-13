@@ -3,6 +3,7 @@
 > **A high-performance personal developer blog, digital garden, and portfolio template crafted with Astro 7, Tailwind CSS 4, strict TypeScript, and an ultra-tactile Liquid Glass Dark UI.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-indigo.svg)](./LICENSE)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/acaf0ca9-98d3-424b-bff9-e079ab8e23bb/deploy-status)](https://app.netlify.com/projects/devblogsite/deploys)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-00DC82.svg?style=flat&logo=netlify&logoColor=white)](https://devblogsite.netlify.app)
 [![Built with Astro](https://img.shields.io/badge/Astro-7.2-ff5d01.svg)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg)](https://tailwindcss.com)
@@ -17,7 +18,7 @@
 
 Experience the template live in action:
 
-👉 **[https://devlog-astro-template.netlify.app](https://devlog-astro-template.netlify.app)**
+👉 **[https://devblogsite.netlify.app](https://devblogsite.netlify.app)**
 
 > ✨ *Features interactive MDX components, lightning-fast static Pagefind search, full RSS feed, and custom 404 page routing.*
 
