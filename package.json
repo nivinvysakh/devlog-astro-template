@@ -35,7 +35,7 @@
     "@astrojs/sitemap": "latest",
     "@tailwindcss/typography": "latest",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "7.2.8",
+    "astro": "7.3.2",
     "astro-expressive-code": "latest",
     "lucide-astro": "latest",
     "mdast-util-to-string": "latest",
