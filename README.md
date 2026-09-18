@@ -1,32 +1,103 @@
+<div align="center">
+
 # 🌐 DEV.LOG — Personal Developer Blog & Digital Garden
 
-> **A high-performance personal developer blog, digital garden, and portfolio template crafted with Astro 7, Tailwind CSS 4, strict TypeScript, and an ultra-tactile Liquid Glass Dark UI.**
+**A high-performance personal developer blog, digital notebook, and portfolio template.**  
+Crafted with **Astro 7**, **Tailwind CSS 4**, strict **TypeScript**, and a tactile **Liquid Glass Dark UI**.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-indigo.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-6366f1.svg?style=flat-square)](./LICENSE)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/acaf0ca9-98d3-424b-bff9-e079ab8e23bb/deploy-status)](https://app.netlify.com/projects/devblogsite/deploys)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-00DC82.svg?style=flat&logo=netlify&logoColor=white)](https://devblogsite.netlify.app)
-[![Built with Astro](https://img.shields.io/badge/Astro-7.2-ff5d01.svg)](https://astro.build)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg)](https://tailwindcss.com)
-[![Pagefind](https://img.shields.io/badge/Search-Pagefind-818cf8.svg)](https://pagefind.app)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ed.svg)](https://www.docker.com)
-[![CI](https://img.shields.io/badge/CI-Passing-success.svg?logo=github-actions)](./.github/workflows/ci.yml)
-[![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-0366d6.svg?logo=dependabot)](./.github/dependabot.yml)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-00DC82.svg?style=flat-square&logo=netlify&logoColor=white)](https://devblogsite.netlify.app)
+[![Built with Astro](https://img.shields.io/badge/Astro-7.2-ff5d01.svg?style=flat-square&logo=astro&logoColor=white)](https://astro.build)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178c6.svg?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Search](https://img.shields.io/badge/Search-Pagefind-818cf8.svg?style=flat-square)](https://pagefind.app)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ed.svg?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com)
+[![CI](https://img.shields.io/badge/CI-Passing-success.svg?style=flat-square&logo=github-actions&logoColor=white)](./.github/workflows/ci.yml)
+
+[**Explore Live Demo »**](https://devblogsite.netlify.app) · [**Report Bug »**](https://github.com/yourhandle/devlog-astro-template/issues) · [**Request Feature »**](https://github.com/yourhandle/devlog-astro-template/issues)
+
+</div>
 
 ---
 
-## 🚀 Live Preview & Demo
+## 📑 Table of Contents
 
-Experience the template live in action:
-
-👉 **[https://devblogsite.netlify.app](https://devblogsite.netlify.app)**
-
-> ✨ *Features interactive MDX components, lightning-fast static Pagefind search, full RSS feed, and custom 404 page routing.*
+- [✨ Key Features](#-key-features)
+- [🚀 Live Demo & Screenshots](#-live-demo--screenshots)
+- [⚡ 1-Minute Customization](#-1-minute-customization-single-config-file)
+- [🛠️ Quick Start](#️-quick-start)
+- [✍️ Writing Articles & MDX Components](#️-writing-articles--mdx-components)
+  - [Frontmatter Schema](#1-frontmatter-schema-reference)
+  - [Interactive Components](#2-interactive-mdx-components)
+  - [Advanced Code Highlighting](#3-advanced-code-highlighting--diffs)
+- [📂 Project Structure](#-project-structure)
+- [🌐 Deployment](#-deployment-options)
+- [🐳 Docker Support](#-docker-support)
+- [🛡️ Automated CI & Dependabot](#️-automated-ci--dependabot)
+- [📄 License & Credits](#-license--credits)
 
 ---
 
-## ⚡ 1-Minute Customization (Single Configuration File)
+## ✨ Key Features
 
-Customize your entire blog from **one single file**:
+| Category | Features |
+| :--- | :--- |
+| **🚀 Framework & Core** | **Astro 7.2** Islands architecture, **Zero-JS** baseline by default, sub-50ms static delivery, and full SSR/SSG support. |
+| **🎨 Design & Theme** | **Liquid Glass UI** built with **Tailwind CSS 4**, translucent frosted glass cards, dynamic ambient glow meshes, and smooth spring physics micro-interactions. |
+| **🔍 Search & Indexing** | **Pagefind** client-side static full-text search with instant modal dialog and keyboard shortcut navigation (`Cmd+K` / `Ctrl+K`). |
+| **📝 Rich Content & MDX** | Interactive MDX story components (`<Callout />`, `<ArchitecturePanel />`, `<SpeechBubble />`, `<CharacterAside />`) and **Astro Expressive Code** for syntax highlighting. |
+| **⚡ 1-Minute Setup** | Configure your entire personal brand, bio, social links, hero text, and navigation from **a single configuration file** (`src/config/site.ts`). |
+| **🏷️ Taxonomy & Navigation** | Dynamic category showcases (`/categories/*`), tag explorer (`/tags/*`), table of contents with scroll spy, and reading time estimation. |
+| **📡 Syndication & SEO** | Out-of-the-box **RSS 2.0 feed** (`/rss.xml`), automated **XML Sitemap** (`/sitemap-index.xml`), and OpenGraph / Twitter meta tags. |
+| **🐳 Production Ready** | Multi-stage **Docker** & Docker Compose setup, **GitHub Actions CI**, and automated **Dependabot** security updates. |
+
+---
+
+## 🚀 Live Demo & Screenshots
+
+Experience the template live in action at: **[https://devblogsite.netlify.app](https://devblogsite.netlify.app)**
+
+### 🖼️ UI Showcase
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>🏠 Home Page & Hero</strong><br/><br/>
+      <img src="assets/home.png" alt="Home Page Screenshot" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <strong>📖 Blog Post & MDX Layout</strong><br/><br/>
+      <img src="assets/post.png" alt="Blog Post Screenshot" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>👤 About Me & Experience</strong><br/><br/>
+      <img src="assets/about_me.png" alt="About Page Screenshot" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <strong>📚 All Articles Directory</strong><br/><br/>
+      <img src="assets/articles.png" alt="Articles Page Screenshot" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>📂 Categories Matrix</strong><br/><br/>
+      <img src="assets/categories.png" alt="Categories Page Screenshot" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <strong>🏷️ Tag Explorer</strong><br/><br/>
+      <img src="assets/tag.png" alt="Tags Page Screenshot" width="100%">
+    </td>
+  </tr>
+</table>
+
+---
+
+## ⚡ 1-Minute Customization (Single Config File)
+
+Customize your entire blog from **one single file** — no hunting through nested components:
 
 👉 **[`src/config/site.ts`](./src/config/site.ts)** (or root alias **[`site.config.ts`](./site.config.ts)**)
 
@@ -138,59 +209,53 @@ export const siteConfig = {
 
 ---
 
-## 🚀 Quick Start
+## ️ Quick Start
 
-| Command | Action |
-| :--- | :--- |
-| `npm install` | Install project dependencies |
-| `npm run dev` | Start local development server at `http://localhost:4321` |
-| `npm run check` | Run type-checking & `@astrojs/check` diagnostics |
-| `npm run build` | Build static production output & generate Pagefind search index |
-| `npm run preview` | Locally preview the production build in `dist/` |
+### Prerequisites
+
+- **Node.js** `v22.12.0` or higher (compatible with modern Node versions)
+- **npm**, **pnpm**, **yarn**, or **bun**
+
+### 1. Clone & Install
+
+```bash
+# Clone the repository
+git clone https://github.com/yourhandle/devlog-astro-template.git my-blog
+
+# Navigate into project directory
+cd my-blog
+
+# Install dependencies
+npm install
+```
+
+### 2. Run Development Server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:4321](http://localhost:4321) in your browser to see your blog running live with instant Hot Module Replacement (HMR).
+
+### 3. Available NPM Scripts
+
+| Script | Command | Description |
+| :--- | :--- | :--- |
+| **`npm run dev`** | `astro dev` | Starts the local dev server on port `4321` |
+| **`npm run check`** | `astro check` | Runs Astro diagnostic & strict TypeScript type-checking |
+| **`npm run build`** | `astro build && pagefind` | Compiles production bundle & builds static Pagefind search index |
+| **`npm run preview`** | `astro preview` | Previews the compiled `dist/` directory locally |
+| **`npm run pagefind`** | `pagefind --site dist` | Re-indexes search records manually from static output |
 
 ---
 
-## 🐳 Docker Support
+## ✍️ Writing Articles & MDX Components
 
-Run the blog locally or deploy in production using Docker:
-
-### Using Docker Compose (Fastest):
-```bash
-docker compose up --build
-```
-Open **`http://localhost:3000`** in your browser.
-
-### Using Plain Docker:
-```bash
-# Build the multi-stage image
-docker build -t devlog-blog .
-
-# Run container on port 3000
-docker run -d -p 3000:80 --name devlog-blog devlog-blog
-```
-
----
-
-## 🛡️ Automated CI & Dependabot
-
-This repository includes production-ready GitHub Actions and automated dependency management:
-
-- **Continuous Integration ([`.github/workflows/ci.yml`](./.github/workflows/ci.yml))**:
-  - Automatically executes on pushes and pull requests to `main` and `master`.
-  - Runs **`npm run check`** (Astro compiler checks and strict TypeScript verification).
-  - Runs **`npm run build`** (validating that all 27 static routes and Pagefind search index compile cleanly).
-- **Dependabot Security & Updates ([`.github/dependabot.yml`](./.github/dependabot.yml))**:
-  - Weekly checks every Monday at 04:00 UTC.
-  - Monitors **`npm`** packages, **`github-actions`**, and **`docker`** base images (`node:20-alpine`, `nginx:alpine`).
-  - Automatically creates categorized, labelled pull requests with conventional commit prefixes.
-
-## ✍️ Writing Articles & Complete MDX Component Guide
-
-Articles are written in Markdown/MDX files located inside `src/content/blog/`.
+Articles are standard Markdown or MDX documents located in **`src/content/blog/`**.
 
 ### 1. Frontmatter Schema Reference
 
-Create a file like `src/content/blog/05-my-first-post.mdx` with the following frontmatter:
+Create a file like `src/content/blog/my-new-post.mdx`:
 
 ```yaml
 ---
@@ -202,15 +267,29 @@ tags: ["Astro", "TypeScript", "Performance", "CSS"]
 heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=80"
 heroImageAlt: "High performance code editor and server architecture"
 issueNumber: "Vol. 05"
-featured: false # Set to true to showcase this post in the hero magazine cover
+featured: false # Set to true to feature this article on the homepage hero
 ---
 ```
+
+#### Field Reference:
+
+| Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `title` | `string` | **Yes** | Article headline |
+| `description` | `string` | **Yes** | Short summary for excerpts & SEO meta description |
+| `pubDate` | `Date` | **Yes** | Publication date (`YYYY-MM-DD`) |
+| `category` | `enum` | **Yes** | `'Tech'`, `'Design'`, `'Architecture'`, `'Story'`, `'Culture'` |
+| `tags` | `string[]` | No | List of keyword tags (e.g. `["Astro", "CSS"]`) |
+| `heroImage` | `string` | No | Path (`/images/...`) or remote URL for article banner |
+| `heroImageAlt`| `string` | No | Accessible image description |
+| `issueNumber` | `string` | No | Volume/Issue badge (e.g. `"Vol. 01"`) |
+| `featured` | `boolean` | No | Defaults to `false`. If `true`, pins to the homepage hero |
 
 ---
 
 ### 2. Interactive MDX Components
 
-Import components at the top of your `.mdx` file:
+Import interactive components directly at the top of your `.mdx` file:
 
 ```mdx
 import Callout from '../../components/mdx/Callout.astro';
@@ -221,17 +300,16 @@ import CharacterAside from '../../components/mdx/CharacterAside.astro';
 
 ---
 
-#### 💡 Component 1: `<Callout />` (Alerts & Tips)
+#### 💡 Component 1: `<Callout />` (Alerts, Pro Tips & Warnings)
 
-Used for highlighting important technical tips, warnings, and architectural principles.
+Used for highlighting key technical principles, tips, warnings, and architectural insights.
 
 ##### Props:
-- `type`: `'tip'` (default / cyan), `'technique'` (indigo), `'warning'` (rose), `'secret'` (purple)
-- `title`: String (e.g. `"Zero-JS Baseline"`)
+- `type`: `'tip'` (cyan) | `'technique'` (indigo) | `'warning'` (rose) | `'secret'` (purple)
+- `title`: String header (e.g. `"Zero-JS Baseline"`)
 - `badge`: Optional custom badge label (defaults to `"PRO TIP"`, `"CORE TECHNIQUE"`, etc.)
 
-##### Examples:
-
+##### Code Example:
 ```mdx
 <Callout type="tip" title="Pro Tip on Bundle Sizes">
   Astro components render pure static HTML on the server by default. No client JS is sent unless a `client:*` directive is attached!
@@ -254,16 +332,15 @@ Used for highlighting important technical tips, warnings, and architectural prin
 
 #### 🏗️ Component 2: `<ArchitecturePanel />` (Side-by-Side Comparison Grids)
 
-Used for side-by-side architecture comparisons, before/after code contrasts, and multi-column technical cards.
+Used for before/after architecture comparisons, pros & cons, and multi-column technical matrices.
 
 ##### Props:
 - `columns`: `1` | `2` (default) | `3`
 - `title`: String header (default: `"Architecture Matrix"`)
-- `caption`: Optional footer caption (displayed in subtle monospace)
+- `caption`: Optional footer caption (displayed in monospace)
 - `badge`: Optional right-side header tag (default: `"ARCHITECTURE PANEL"`)
 
-##### Example:
-
+##### Code Example:
 ```mdx
 <ArchitecturePanel columns={2} title="Architecture Comparison" caption="Monolithic Single-Page Apps vs Astro Islands">
   <div class="p-5 rounded-2xl bg-rose-500/10 border border-rose-500/20">
@@ -292,9 +369,9 @@ Used for side-by-side architecture comparisons, before/after code contrasts, and
 
 ---
 
-#### 💬 Component 3: `<SpeechBubble />` (Dialogue & Discussion Cards)
+#### 💬 Component 3: `<SpeechBubble />` (Dialogue & Interview Cards)
 
-Used for quotes, interview insights, debates, or conversational technical explanations.
+Used for conversational technical debates, quotes, and expert interview snippets.
 
 ##### Props:
 - `speaker`: Name of speaker (e.g. `"Alex Rivera"`)
@@ -303,8 +380,7 @@ Used for quotes, interview insights, debates, or conversational technical explan
 - `side`: `'left'` (default) | `'right'`
 - `variant`: `'normal'` (default) | `'shout'` (accent glow) | `'thought'` (dashed border & italic)
 
-##### Example:
-
+##### Code Example:
 ```mdx
 <SpeechBubble 
   speaker="Elena Rostova" 
@@ -328,17 +404,16 @@ Used for quotes, interview insights, debates, or conversational technical explan
 
 ---
 
-#### 👤 Component 4: `<CharacterAside />` (Author Commentary & Notes)
+#### 👤 Component 4: `<CharacterAside />` (Author Commentary)
 
-Used for inline author thoughts, side commentary, and key takeaways.
+Used for inline author side-notes, practical lessons, and tips.
 
 ##### Props:
-- `name`: Author or note name (default: `"Architecture Note"`)
+- `name`: Author name (default: `"Architecture Note"`)
 - `role`: Role or subtitle (default: `"Lead Engineer"`)
 - `avatar`: Emoji or image path (default: `"⚡"`)
 
-##### Example:
-
+##### Code Example:
 ```mdx
 <CharacterAside name="Alex Morgan" role="Software Engineer" avatar="⚡">
   "By setting `isolation: isolate` on liquid glass containers, browser compositors render subpixel corner curves smoothly without artifact bleeding."
@@ -347,9 +422,9 @@ Used for inline author thoughts, side commentary, and key takeaways.
 
 ---
 
-### 3. Advanced Code Blocks & Syntax Highlighting
+### 3. Advanced Code Highlighting & Diffs
 
-This blog includes built-in **Astro Expressive Code** support for high-end code presentations:
+Powered by **Astro Expressive Code** for syntax-highlighted code presentations:
 
 #### File Headers:
 ````markdown
@@ -374,38 +449,120 @@ isSuccess: boolean;
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
-├── site.config.ts             # 🌟 Root alias for 1-file site configuration
+├── site.config.ts                 # 🌟 Root alias for 1-file site configuration
 ├── src/
 │   ├── config/
-│   │   └── site.ts            # ⭐ Single Source of Truth (Author, Bio, Socials, Hero, Meta)
+│   │   └── site.ts                # ⭐ Single Source of Truth (Author, Bio, Socials, Hero, Meta)
 │   ├── content/
-│   │   └── blog/              # MDX Blog Articles
+│   │   ├── config.ts              # Zod collection schema validation
+│   │   └── blog/                  # MDX Blog Articles (01-*.mdx, 02-*.mdx, etc.)
 │   ├── components/
-│   │   ├── layout/            # Header, Footer, Navigation, ThemeToggle, SearchModal
-│   │   ├── mdx/               # ArchitecturePanel, Callout, SpeechBubble, CharacterAside
-│   │   └── ui/                # HeroMagazineCover, PostCard, ArticleSidebar
+│   │   ├── layout/                # Header, Footer, Navigation, ThemeToggle, SearchModal
+│   │   ├── mdx/                   # ArchitecturePanel, Callout, SpeechBubble, CharacterAside
+│   │   └── ui/                    # HeroMagazineCover, PostCard, ArticleSidebar, HankoStamp
 │   ├── layouts/
-│   │   ├── BaseLayout.astro   # Main layout with Liquid Glass ambient mesh & SEO
-│   │   └── BlogPostLayout.astro # Article layout with reading time, TOC, and author bio
-│   └── pages/
-│       ├── index.astro        # Home page with Hero, Featured post & Recent articles
-│       ├── blog/              # Article index & Dynamic [slug] routes
-│       ├── categories/        # Category directory & Category filter pages
-│       ├── tags/              # Tag cloud & Tag filter pages
-│       ├── about.astro        # Personal About Me page with bio, tech stack & experience
-│       └── rss.xml.ts         # Full RSS feed generator
-└── public/
-    └── images/
-        └── avatar.jpg         # Author avatar photo
+│   │   ├── BaseLayout.astro       # Main layout with Liquid Glass ambient mesh & SEO
+│   │   └── BlogPostLayout.astro   # Article layout with reading time, TOC, and author bio
+│   ├── pages/
+│   │   ├── index.astro            # Home page with Hero, Featured post & Recent articles
+│   │   ├── blog/                  # Article index & Dynamic [slug] routes
+│   │   ├── categories/            # Category directory & Category filter pages
+│   │   ├── tags/                  # Tag cloud & Tag filter pages
+│   │   ├── about.astro            # Personal About Me page with bio, tech stack & experience
+│   │   ├── 404.astro              # Custom 404 Not Found page
+│   │   └── rss.xml.ts             # Full RSS 2.0 feed generator
+│   └── styles/
+│       └── global.css             # Tailwind 4 imports, Liquid Glass tokens, typography
+├── public/
+│   ├── favicon.svg                # Site favicon
+│   └── images/                    # Local images and avatar photo
+├── .github/
+│   ├── workflows/ci.yml           # Automated Astro check & build CI workflow
+│   └── dependabot.yml             # Automated dependency security monitor
+├── Dockerfile                     # Multi-stage lightweight Nginx container build
+├── docker-compose.yml             # 1-command Docker environment
+├── astro.config.mjs               # Astro integrations & Vite plugins
+├── package.json                   # Project scripts and dependencies
+└── tsconfig.json                  # Strict TypeScript configuration
 ```
 
 ---
 
-## 📄 License
+## 🌐 Deployment Options
+
+Deploy anywhere with static hosting:
+
+### 1. Deploy to Netlify (Recommended)
+This template is pre-configured for Netlify:
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
+
+### 2. Deploy to Vercel
+```bash
+npx vercel
+```
+Set Framework Preset to **Astro**, Build Command to `npm run build`, and Output Directory to `dist`.
+
+### 3. Deploy to Cloudflare Pages
+- **Framework Preset:** Astro
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
+
+---
+
+## 🐳 Docker Support
+
+Run the blog locally or deploy in production using Docker:
+
+### Using Docker Compose (Fastest):
+```bash
+docker compose up --build
+```
+Open **`http://localhost:3000`** in your browser.
+
+### Using Plain Docker:
+```bash
+# 1. Build the multi-stage image
+docker build -t devlog-blog .
+
+# 2. Run container on port 3000
+docker run -d -p 3000:80 --name devlog-blog devlog-blog
+```
+
+---
+
+## 🛡️ Automated CI & Dependabot
+
+This repository includes production-ready GitHub Actions and automated dependency management:
+
+- **Continuous Integration ([`.github/workflows/ci.yml`](./.github/workflows/ci.yml))**:
+  - Automatically executes on pushes and pull requests to `main` and `master`.
+  - Runs **`npm run check`** (Astro compiler diagnostics and strict TypeScript verification).
+  - Runs **`npm run build`** (validating that all static routes and Pagefind search index compile cleanly).
+- **Dependabot Security & Updates ([`.github/dependabot.yml`](./.github/dependabot.yml))**:
+  - Weekly checks every Monday at 04:00 UTC.
+  - Monitors **`npm`** packages, **`github-actions`**, and **`docker`** base images (`node:20-alpine`, `nginx:alpine`).
+  - Automatically creates categorized, labelled pull requests with conventional commit prefixes.
+
+---
+
+## 📄 License & Credits
 
 This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
 
 You are completely free to use, modify, customize, and deploy this template for your personal blog, digital garden, or portfolio website.
+
+---
+
+<div align="center">
+
+Crafted with ❤️ using **[Astro](https://astro.build)** & **[Tailwind CSS](https://tailwindcss.com)**.
+
+⭐ **If you find this template helpful, please consider giving it a star on GitHub!**
+
+</div>
