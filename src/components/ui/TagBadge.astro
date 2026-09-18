@@ -1,4 +1,6 @@
 ---
+import { url } from '../../utils/paths';
+
 interface Props {
   tag: string;
   size?: 'sm' | 'md';
@@ -11,7 +13,7 @@ const sizeClass = size === 'sm' ? 'text-xs px-3 py-1' : 'text-sm px-4 py-1.5';
 ---
 
 <a
-  href={`/tags/${encodeURIComponent(tag.toLowerCase())}`}
+  href={url(`/tags/${encodeURIComponent(tag.toLowerCase())}`)}
   class:list={[
     'inline-flex items-center gap-1.5 font-medium rounded-full transition-all duration-200',
     sizeClass,

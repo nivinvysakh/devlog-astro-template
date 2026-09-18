@@ -1,11 +1,14 @@
 ---
 import siteConfig from "../../config/site";
+import { url } from "../../utils/paths";
 import { Search, X } from "lucide-astro";
 
 const searchConfig = siteConfig.search || {
   modalTitle: "Search Publications",
   placeholder: "Type keywords (e.g. Astro, TypeScript, Islands, CSS)...",
 };
+const pagefindScriptUrl = url("/pagefind/pagefind-ui.js");
+const pagefindCssUrl = url("/pagefind/pagefind-ui.css");
 ---
 
 <!-- Search Trigger Button -->
@@ -28,6 +31,7 @@ const searchConfig = siteConfig.search || {
 <dialog
   id="search-dialog"
   data-placeholder={searchConfig.placeholder}
+  data-pagefind-script={pagefindScriptUrl}
   class="backdrop:bg-slate-950/60 backdrop:backdrop-blur-xl p-0 bg-transparent max-w-2xl w-[92vw] m-auto rounded-3xl border-0 overflow-visible focus:outline-none"
 >
   <div
@@ -124,7 +128,7 @@ const searchConfig = siteConfig.search || {
         initUI();
       } else {
         const script = document.createElement("script");
-        script.src = "/pagefind/pagefind-ui.js";
+        script.src = dialog?.dataset.pagefindScript || "/pagefind/pagefind-ui.js";
         script.onload = initUI;
         script.onerror = () => {
           console.warn("Pagefind static index is compiled via npm run build.");
@@ -178,4 +182,5 @@ const searchConfig = siteConfig.search || {
   document.addEventListener("astro:after-swap", setupSearch);
 </script>
 
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<link href={pagefindCssUrl} rel="stylesheet" />
+

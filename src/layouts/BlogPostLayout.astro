@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import TableOfContents from '../components/ui/TableOfContents.astro';
 import TagBadge from '../components/ui/TagBadge.astro';
 import siteConfig from '../config/site';
+import { url } from '../utils/paths';
 import { Calendar, Clock, User, Share2, ArrowLeft, ArrowRight, Sparkles, Github, Twitter, Linkedin, Mail } from 'lucide-astro';
 
 interface Props {
@@ -47,7 +48,7 @@ const ui = siteConfig.ui || {
   <!-- Breadcrumb / Back Link -->
   <nav class="mb-6 flex items-center justify-between">
     <a
-      href="/blog"
+      href={url('/blog')}
       class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
     >
       <ArrowLeft class="w-3.5 h-3.5" />
@@ -67,7 +68,7 @@ const ui = siteConfig.ui || {
     {data.heroImage && (
       <div class="mb-8 -mx-2 sm:-mx-4 -mt-2 sm:-mt-4 rounded-2xl overflow-hidden border border-white/20 dark:border-white/10 shadow-lg relative group">
         <img
-          src={data.heroImage}
+          src={url(data.heroImage)}
           alt={data.heroImageAlt || data.title}
           class="w-full h-60 sm:h-80 md:h-[380px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           loading="eager"
@@ -114,7 +115,7 @@ const ui = siteConfig.ui || {
       <div class="flex items-center gap-3">
         {authorAvatar && (authorAvatar.startsWith('/') || authorAvatar.startsWith('http')) ? (
           <img
-            src={authorAvatar}
+            src={url(authorAvatar)}
             alt={authorName}
             class="w-11 h-11 rounded-full object-cover border border-white/25 dark:border-white/10 shadow-md ring-2 ring-indigo-500/20"
           />
@@ -160,7 +161,7 @@ const ui = siteConfig.ui || {
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
           {authorAvatar && (authorAvatar.startsWith('/') || authorAvatar.startsWith('http')) ? (
             <img
-              src={authorAvatar}
+              src={url(authorAvatar)}
               alt={authorName}
               class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border border-white/30 dark:border-white/10 shadow-lg ring-2 ring-indigo-500/25 shrink-0"
             />
@@ -212,7 +213,7 @@ const ui = siteConfig.ui || {
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-white/20 dark:border-white/10">
         {prevPost ? (
           <a
-            href={`/blog/${prevPost.id.replace(/\.(md|mdx)$/, '')}`}
+            href={url(`/blog/${prevPost.id.replace(/\.(md|mdx)$/, '')}`)}
             class="p-4 rounded-2xl liquid-glass-card shadow-xs flex flex-col justify-between transition-all"
           >
             <span class="text-xs text-indigo-600 dark:text-indigo-400 font-semibold flex items-center gap-1 uppercase">
@@ -230,7 +231,7 @@ const ui = siteConfig.ui || {
 
         {nextPost ? (
           <a
-            href={`/blog/${nextPost.id.replace(/\.(md|mdx)$/, '')}`}
+            href={url(`/blog/${nextPost.id.replace(/\.(md|mdx)$/, '')}`)}
             class="p-4 rounded-2xl liquid-glass-card shadow-xs flex flex-col justify-between text-right transition-all"
           >
             <span class="text-xs text-indigo-600 dark:text-indigo-400 font-semibold flex items-center justify-end gap-1 uppercase">
@@ -262,7 +263,7 @@ const ui = siteConfig.ui || {
         <div class="flex items-start gap-3.5">
           {authorAvatar && (authorAvatar.startsWith('/') || authorAvatar.startsWith('http')) ? (
             <img
-              src={authorAvatar}
+              src={url(authorAvatar)}
               alt={authorName}
               class="w-12 h-12 rounded-2xl object-cover border border-white/25 dark:border-white/10 shadow-md ring-2 ring-indigo-500/20 shrink-0"
             />

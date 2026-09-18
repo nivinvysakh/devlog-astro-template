@@ -1,5 +1,6 @@
 ---
 import siteConfig from '../../config/site';
+import { url } from '../../utils/paths';
 import { Rss, Github, Twitter, Sparkles, Heart } from 'lucide-astro';
 
 const newsletter = siteConfig.newsletter || {
@@ -98,7 +99,7 @@ const brandDescription = siteConfig.footer.brandDescription || siteConfig.descri
             </a>
           )}
           <a
-            href="/rss.xml"
+            href={url('/rss.xml')}
             aria-label="RSS Feed"
             class="p-2.5 rounded-full liquid-pill text-zinc-600 dark:text-zinc-400 hover:text-amber-500 hover:scale-105 transition-all"
           >
@@ -114,7 +115,7 @@ const brandDescription = siteConfig.footer.brandDescription || siteConfig.descri
         </h4>
         <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
           {siteConfig.navLinks.map((link) => (
-            <li><a href={link.href} class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{link.text}</a></li>
+            <li><a href={url(link.href)} class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{link.text}</a></li>
           ))}
         </ul>
       </div>
@@ -126,7 +127,7 @@ const brandDescription = siteConfig.footer.brandDescription || siteConfig.descri
         </h4>
         <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
           {siteConfig.categories.map((cat) => (
-            <li><a href={`/categories/${cat.name.toLowerCase()}`} class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{cat.name}</a></li>
+            <li><a href={url(`/categories/${cat.name.toLowerCase()}`)} class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{cat.name}</a></li>
           ))}
         </ul>
       </div>

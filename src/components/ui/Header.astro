@@ -1,6 +1,7 @@
 ---
 import SearchModal from './SearchModal.astro';
 import siteConfig from '../../config/site';
+import { url } from '../../utils/paths';
 import { Menu, X, Rss, BookOpen, Tag, Compass, User, Github } from 'lucide-astro';
 
 const navIcons: Record<string, any> = {
@@ -12,7 +13,7 @@ const navIcons: Record<string, any> = {
 
 const navItems = siteConfig.navLinks.map((link) => ({
   label: link.text,
-  href: link.href,
+  href: url(link.href),
   icon: navIcons[link.text] || Compass,
 }));
 ---
@@ -21,7 +22,7 @@ const navItems = siteConfig.navLinks.map((link) => ({
   <div class="liquid-glass rounded-full px-3.5 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-lg">
     
     <!-- Brand Mark -->
-    <a href="/" class="flex items-center gap-2 sm:gap-2.5 group">
+    <a href={url('/')} class="flex items-center gap-2 sm:gap-2.5 group">
       <div class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-600 text-white shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform font-bold text-xs uppercase">
         {siteConfig.logoLetter || siteConfig.name.charAt(0)}
       </div>
@@ -67,7 +68,7 @@ const navItems = siteConfig.navLinks.map((link) => ({
       </a>
 
       <a
-        href="/rss.xml"
+        href={url('/rss.xml')}
         aria-label="RSS Feed"
         class="hidden sm:flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full liquid-pill text-zinc-300 hover:text-amber-400 hover:scale-105 transition-all shadow-xs"
         title="Subscribe to RSS"
@@ -120,7 +121,7 @@ const navItems = siteConfig.navLinks.map((link) => ({
       </a>
 
       <a
-        href="/rss.xml"
+        href={url('/rss.xml')}
         class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-semibold text-amber-400 hover:bg-amber-500/10 transition-all"
       >
         <Rss class="w-4 h-4" />

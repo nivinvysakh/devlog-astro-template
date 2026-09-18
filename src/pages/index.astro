@@ -4,6 +4,7 @@ import HeroMagazineCover from '../components/ui/HeroMagazineCover.astro';
 import PostCard from '../components/ui/PostCard.astro';
 import TagBadge from '../components/ui/TagBadge.astro';
 import siteConfig from '../config/site';
+import { url } from '../utils/paths';
 import { getCollection } from 'astro:content';
 import { ArrowRight, Sparkles, Layers, Zap, Code, Terminal, Github } from 'lucide-astro';
 
@@ -54,7 +55,7 @@ const ui = siteConfig.ui || {
         <!-- Quick Action Buttons -->
         <div class="flex flex-wrap items-center gap-3">
           <a
-            href={siteConfig.hero.primaryButton.href}
+            href={url(siteConfig.hero.primaryButton.href)}
             class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 hover:from-cyan-400 hover:via-indigo-500 hover:to-purple-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all w-full sm:w-auto text-center"
           >
             <span>{siteConfig.hero.primaryButton.text}</span>
@@ -62,7 +63,7 @@ const ui = siteConfig.ui || {
           </a>
 
           <a
-            href={siteConfig.hero.secondaryButton.href}
+            href={url(siteConfig.hero.secondaryButton.href)}
             class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full liquid-pill hover:border-indigo-400/40 text-zinc-200 text-xs sm:text-sm font-semibold hover:scale-[1.02] transition-all w-full sm:w-auto text-center"
           >
             <span>{siteConfig.hero.secondaryButton.text}</span>
@@ -88,7 +89,7 @@ const ui = siteConfig.ui || {
         <div class="relative group/avatar">
           <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 rounded-2xl sm:rounded-3xl blur-md opacity-35 group-hover/avatar:opacity-70 transition duration-500"></div>
           <img
-            src={siteConfig.author.avatar}
+            src={url(siteConfig.author.avatar)}
             alt={siteConfig.author.name}
             class="relative w-20 h-20 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-2xl sm:rounded-3xl object-cover border-2 border-white/20 shadow-2xl transition-transform duration-500 group-hover/avatar:scale-105"
           />
@@ -115,7 +116,7 @@ const ui = siteConfig.ui || {
 
       <!-- View All Link -->
       <a
-        href="/blog"
+        href={url('/blog')}
         class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors"
       >
         <span>View All Articles ({allPosts.length})</span>
@@ -148,7 +149,7 @@ const ui = siteConfig.ui || {
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {categories.map((cat) => (
           <a
-            href={`/categories/${cat.name.toLowerCase()}`}
+            href={url(`/categories/${cat.name.toLowerCase()}`)}
             class="group p-5 rounded-2xl liquid-glass-card hover:scale-[1.02] flex flex-col justify-between transition-all"
           >
             <div class="flex items-center justify-between mb-2">

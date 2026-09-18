@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import siteConfig from '../../config/site';
+import { url } from '../../utils/paths';
 import { getCollection } from 'astro:content';
 import { ArrowRight, Layers } from 'lucide-astro';
 
@@ -34,7 +35,7 @@ const categoryList = categories.map((cat) => ({
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {categoryList.map((cat) => (
       <a
-        href={`/categories/${cat.name.toLowerCase()}`}
+        href={url(`/categories/${cat.name.toLowerCase()}`)}
         class="group p-7 rounded-3xl liquid-glass-card shadow-lg hover:scale-[1.02] transition-all flex flex-col justify-between"
       >
         <div>

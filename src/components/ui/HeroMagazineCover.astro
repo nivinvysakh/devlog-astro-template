@@ -1,6 +1,7 @@
 ---
 import TagBadge from './TagBadge.astro';
 import siteConfig from '../../config/site';
+import { url } from '../../utils/paths';
 import { ArrowRight, Calendar, User, Clock, Sparkles } from 'lucide-astro';
 
 interface Props {
@@ -12,6 +13,7 @@ const data = post.data;
 const slug = post.id.replace(/\.(md|mdx)$/, '');
 const authorName = siteConfig.author.name;
 const authorAvatar = siteConfig.author.avatar;
+const postUrl = url(`/blog/${slug}`);
 ---
 
 <section class="relative my-4 sm:my-10">
@@ -40,7 +42,7 @@ const authorAvatar = siteConfig.author.avatar;
 
         <!-- Main Title Headline -->
         <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-50 tracking-tight leading-[1.2] sm:leading-[1.15] mb-3 sm:mb-5">
-          <a href={`/blog/${slug}`} class="hover:text-prismatic transition-colors">
+          <a href={postUrl} class="hover:text-prismatic transition-colors">
             {data.title}
           </a>
         </h1>
@@ -56,7 +58,7 @@ const authorAvatar = siteConfig.author.avatar;
             <div class="flex items-center gap-2 font-medium text-zinc-200">
               {authorAvatar && (authorAvatar.startsWith('/') || authorAvatar.startsWith('http')) ? (
                 <img
-                  src={authorAvatar}
+                  src={url(authorAvatar)}
                   alt={authorName}
                   class="w-6 h-6 rounded-full object-cover border border-white/10 shrink-0"
                 />
@@ -72,7 +74,7 @@ const authorAvatar = siteConfig.author.avatar;
           </div>
 
           <a
-            href={`/blog/${slug}`}
+            href={postUrl}
             class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 hover:from-cyan-400 hover:via-indigo-500 hover:to-purple-500 text-white text-sm font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all w-full sm:w-auto text-center"
           >
             <span>Read Article</span>
@@ -84,11 +86,11 @@ const authorAvatar = siteConfig.author.avatar;
       {data.heroImage && (
         <div class="lg:col-span-5 flex items-center justify-center self-center lg:-translate-y-6">
           <a
-            href={`/blog/${slug}`}
+            href={postUrl}
             class="block w-full rounded-2xl overflow-hidden border border-white/25 dark:border-white/10 shadow-xl group/img relative"
           >
             <img
-              src={data.heroImage}
+              src={url(data.heroImage)}
               alt={data.heroImageAlt || data.title}
               class="w-full h-64 sm:h-76 lg:h-[310px] object-cover object-center transition-transform duration-700 ease-out group-hover/img:scale-105"
             />

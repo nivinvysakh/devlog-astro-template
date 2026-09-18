@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import siteConfig from '../../config/site';
+import { url } from '../../utils/paths';
 import { getCollection } from 'astro:content';
 import { Tag } from 'lucide-astro';
 
@@ -34,7 +35,7 @@ const tagsWithCount = tags.map((tag) => ({
     <div class="flex flex-wrap gap-3">
       {tagsWithCount.map((tag) => (
         <a
-          href={`/tags/${encodeURIComponent(tag.name.toLowerCase())}`}
+          href={url(`/tags/${encodeURIComponent(tag.name.toLowerCase())}`)}
           class="flex items-center gap-2 px-4 py-2 rounded-full liquid-pill hover:scale-105 hover:border-indigo-400/40 transition-all text-xs sm:text-sm font-medium"
         >
           <span class="text-indigo-500 dark:text-indigo-400 font-mono text-xs font-semibold">#</span>

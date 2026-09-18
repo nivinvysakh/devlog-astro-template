@@ -1,4 +1,6 @@
 ---
+import { url } from '../../utils/paths';
+
 interface Props {
   speaker?: string;
   role?: string;
@@ -25,7 +27,7 @@ const isRight = side === 'right';
       class="w-12 h-12 rounded-full liquid-pill flex items-center justify-center text-xl shadow-md overflow-hidden"
     >
       {avatar.startsWith('http') || avatar.startsWith('/') ? (
-        <img src={avatar} alt={speaker} class="w-full h-full object-cover" />
+        <img src={url(avatar)} alt={speaker} class="w-full h-full object-cover" />
       ) : (
         <span>{avatar}</span>
       )}

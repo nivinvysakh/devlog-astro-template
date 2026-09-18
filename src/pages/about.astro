@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SpeechBubble from '../components/mdx/SpeechBubble.astro';
 import siteConfig from '../config/site';
+import { url } from '../utils/paths';
 import { Layers, Shield, Cpu, Zap, Sparkles, Github, Twitter, Linkedin, Mail, Code2, Rocket, Compass, Heart } from 'lucide-astro';
 
 const aboutData = siteConfig.about;
@@ -73,7 +74,7 @@ const quote = aboutData?.quote || 'Every byte of JavaScript saved and every mill
         <div class="relative group/avatar">
           <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 rounded-3xl blur-md opacity-40 group-hover/avatar:opacity-75 transition duration-500"></div>
           <img
-            src={siteConfig.author.avatar}
+            src={url(siteConfig.author.avatar)}
             alt={siteConfig.author.name}
             class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-3xl object-cover border-2 border-white/40 dark:border-white/20 shadow-2xl"
           />

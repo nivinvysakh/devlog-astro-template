@@ -2,6 +2,7 @@
 import Header from '../components/ui/Header.astro';
 import Footer from '../components/ui/Footer.astro';
 import siteConfig from '../config/site';
+import { url } from '../utils/paths';
 import '../styles/global.css';
 
 interface Props {
@@ -19,13 +20,17 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || siteConfig.url);
-const faviconUrl = siteConfig.favicon || '/favicon.svg';
+const faviconUrl = url(siteConfig.favicon || '/favicon.svg');
 const faviconType =
   faviconUrl.endsWith('.svg') || faviconUrl.startsWith('data:image/svg')
     ? 'image/svg+xml'
     : faviconUrl.endsWith('.png')
     ? 'image/png'
     : 'image/x-icon';
+
+const ogImageUrl = image.startsWith('http')
+  ? image
+  : new URL(url(image), Astro.site || siteConfig.url).href;
 ---
 
 <!doctype html>
@@ -38,8 +43,8 @@ const faviconType =
     <link rel="icon" type={faviconType} href={faviconUrl} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href="/rss.xml" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href={url('/rss.xml')} />
+    <link rel="sitemap" href={url('/sitemap-index.xml')} />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
@@ -51,14 +56,14 @@ const faviconType =
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={ogImageUrl} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image" content={ogImageUrl} />
   </head>
   <body class="relative min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
     
