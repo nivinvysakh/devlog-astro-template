@@ -26,15 +26,15 @@ Crafted with **Astro 7**, **Tailwind CSS 4**, strict **TypeScript**, and a tacti
 - [✨ Key Features](#-key-features)
 - [🚀 Live Demo & Screenshots](#-live-demo--screenshots)
 - [⚡ 1-Minute Customization](#-1-minute-customization-single-config-file)
-- [🛠️ Quick Start](#️-quick-start)
-- [✍️ Writing Articles & MDX Components](#️-writing-articles--mdx-components)
+- [🛠️ Quick Start](#-quick-start)
+- [✍️ Writing Articles & MDX Components](#-writing-articles--mdx-components)
   - [Frontmatter Schema](#1-frontmatter-schema-reference)
   - [Interactive Components](#2-interactive-mdx-components)
   - [Advanced Code Highlighting](#3-advanced-code-highlighting--diffs)
 - [📂 Project Structure](#-project-structure)
-- [🌐 Deployment](#-deployment-options)
+- [🌐 1-Click Deployment Options](#-1-click-deployment-options)
 - [🐳 Docker Support](#-docker-support)
-- [🛡️ Automated CI & Dependabot](#️-automated-ci--dependabot)
+- [🛡️ Automated CI & Dependabot](#-automated-ci--dependabot)
 - [📄 License & Credits](#-license--credits)
 
 ---
@@ -209,7 +209,7 @@ export const siteConfig = {
 
 ---
 
-## ️ Quick Start
+## 🛠️ Quick Start
 
 ### Prerequisites
 
