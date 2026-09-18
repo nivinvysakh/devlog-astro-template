@@ -167,7 +167,7 @@ export const siteConfig: SiteConfig = {
     location: "San Francisco, CA",
     status: "Building the future of spatial web interfaces",
     social: {
-      github: "https://github.com",
+      github: "https://github.com/nivinvysakh/devlog-astro-template",
       twitter: "https://twitter.com",
       linkedin: "https://linkedin.com",
       email: "alex@example.com",

@@ -15,7 +15,7 @@ Crafted with **Astro 7**, **Tailwind CSS 4**, strict **TypeScript**, and a tacti
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ed.svg?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com)
 [![CI](https://img.shields.io/badge/CI-Passing-success.svg?style=flat-square&logo=github-actions&logoColor=white)](./.github/workflows/ci.yml)
 
-[**Explore Live Demo »**](https://devblogsite.netlify.app) · [**Report Bug »**](https://github.com/yourhandle/devlog-astro-template/issues) · [**Request Feature »**](https://github.com/yourhandle/devlog-astro-template/issues)
+[**Explore Live Demo »**](https://devblogsite.netlify.app) · [**Report Bug »**](https://github.com/nivinvysakh/devlog-astro-template/issues) · [**Request Feature »**](https://github.com/nivinvysakh/devlog-astro-template/issues)
 
 </div>
 
