@@ -2,21 +2,37 @@
   command = "npm run build"
   publish = "dist"
 
-# Custom 404 Error Page Redirection
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+[build.environment]
+  NODE_VERSION = "22"
+  ASTRO_TELEMETRY_DISABLED = "1"
 
-# Cache & Performance Headers
+# 1. Immutable Long-term Caching for Astro Built Assets
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/pagefind/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# 2. Global Security & Privacy Headers
+[[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# 3. Custom 404 Page Routing
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

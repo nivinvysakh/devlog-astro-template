@@ -480,8 +480,14 @@ isSuccess: boolean;
 │   ├── favicon.svg                # Site favicon
 │   └── images/                    # Local images and avatar photo
 ├── .github/
-│   ├── workflows/ci.yml           # Automated Astro check & build CI workflow
+│   ├── workflows/
+│   │   ├── ci.yml                 # Automated Astro check & build CI workflow
+│   │   └── deploy-github-pages.yml # Free GitHub Pages deployment workflow
 │   └── dependabot.yml             # Automated dependency security monitor
+├── netlify.toml                   # Netlify build, caching & security config
+├── vercel.json                    # Vercel framework, clean URLs & headers config
+├── wrangler.toml                  # Cloudflare Pages / Workers static config
+├── render.yaml                    # Render Static Site blueprint
 ├── Dockerfile                     # Multi-stage lightweight Nginx container build
 ├── docker-compose.yml             # 1-command Docker environment
 ├── astro.config.mjs               # Astro integrations & Vite plugins
@@ -491,27 +497,69 @@ isSuccess: boolean;
 
 ---
 
-## 🌐 Deployment Options
+## 🌐 1-Click Deployment Options
 
-Deploy anywhere with static hosting:
+Deploy your blog in under 60 seconds to any modern hosting platform:
 
-### 1. Deploy to Netlify (Recommended)
-This template is pre-configured for Netlify:
-- **Build command:** `npm run build`
-- **Publish directory:** `dist`
+### 🚀 One-Click Deployments
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
+| Platform | 1-Click Deploy Button | Config File |
+| :--- | :--- | :--- |
+| **Netlify** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nivinvysakh/devlog-astro-template) | [`netlify.toml`](./netlify.toml) |
+| **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nivinvysakh/devlog-astro-template) | [`vercel.json`](./vercel.json) |
+| **Render** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nivinvysakh/devlog-astro-template) | [`render.yaml`](./render.yaml) |
+
+---
+
+### 1. Deploy to Netlify (Zero-Config)
+This repository includes [`netlify.toml`](./netlify.toml) with pre-configured immutable caching for `/_astro/` and custom 404 redirects:
+1. Click the **Deploy to Netlify** button above or connect your GitHub repository.
+2. Netlify will automatically detect:
+   - **Build Command:** `npm run build`
+   - **Publish Directory:** `dist`
+3. Click **Deploy Site** — your blog is live!
+
+---
 
 ### 2. Deploy to Vercel
+This repository includes [`vercel.json`](./vercel.json):
+1. Import your repository into the [Vercel Dashboard](https://vercel.com/new).
+2. Framework Preset will auto-detect as **Astro**.
+3. Click **Deploy**.
+
+Alternatively via CLI:
 ```bash
 npx vercel
 ```
-Set Framework Preset to **Astro**, Build Command to `npm run build`, and Output Directory to `dist`.
 
-### 3. Deploy to Cloudflare Pages
-- **Framework Preset:** Astro
-- **Build command:** `npm run build`
-- **Output directory:** `dist`
+---
+
+### 3. Deploy to GitHub Pages (100% Free & Native)
+An automated GitHub Actions workflow is already included in [`.github/workflows/deploy-github-pages.yml`](./.github/workflows/deploy-github-pages.yml):
+1. Go to your repository **Settings** → **Pages**.
+2. Under **Build and deployment** → **Source**, select **GitHub Actions**.
+3. Push any commit to `main` or `master` — GitHub Actions will automatically compile your site, generate Pagefind search indexes, and publish your blog!
+
+---
+
+### 4. Deploy to Cloudflare Pages
+This repository includes [`wrangler.toml`](./wrangler.toml):
+1. In Cloudflare Dashboard, go to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
+2. Set **Framework Preset** to `Astro`.
+3. Set **Build command** to `npm run build` and **Build output directory** to `dist`.
+4. Click **Save and Deploy**.
+
+Or via Cloudflare Wrangler CLI:
+```bash
+npm run build && npx wrangler pages deploy dist --project-name=my-blog
+```
+
+---
+
+### 5. Deploy to Render
+This repository includes [`render.yaml`](./render.yaml) blueprint:
+1. Connect your repository on [Render Dashboard](https://dashboard.render.com).
+2. Render will automatically provision a global CDN static site using `render.yaml`.
 
 ---
 
