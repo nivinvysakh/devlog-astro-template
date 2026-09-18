@@ -35,7 +35,7 @@ Crafted with **Astro 7**, **Tailwind CSS 4**, strict **TypeScript**, and a tacti
 - [🌐 1-Click Deployment Options](#-1-click-deployment-options)
 - [🐳 Docker Support](#-docker-support)
 - [🛡️ Automated CI & Dependabot](#-automated-ci--dependabot)
-- [📄 License & Credits](#-license--credits)
+- [� License & Credits](#-license--credits)
 
 ---
 
