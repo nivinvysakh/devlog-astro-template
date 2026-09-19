@@ -6,6 +6,7 @@
 Crafted with **Astro 7**, **Tailwind CSS 4**, strict **TypeScript**, and a tactile **Liquid Glass Dark UI**.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-6366f1.svg?style=flat-square)](./LICENSE)
+[![Astro Themes](https://img.shields.io/badge/Astro%20Themes-Official%20Listing-ff5d01.svg?style=flat-square&logo=astro&logoColor=white)](https://portal.astro.build/themes/liquid-glass-blog/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/acaf0ca9-98d3-424b-bff9-e079ab8e23bb/deploy-status)](https://app.netlify.com/projects/devblogsite/deploys)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-00DC82.svg?style=flat-square&logo=netlify&logoColor=white)](https://devblogsite.netlify.app)
 [![Built with Astro](https://img.shields.io/badge/Astro-7.2-ff5d01.svg?style=flat-square&logo=astro&logoColor=white)](https://astro.build)
@@ -15,7 +16,7 @@ Crafted with **Astro 7**, **Tailwind CSS 4**, strict **TypeScript**, and a tacti
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ed.svg?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com)
 [![CI](https://img.shields.io/badge/CI-Passing-success.svg?style=flat-square&logo=github-actions&logoColor=white)](./.github/workflows/ci.yml)
 
-[**Explore Live Demo »**](https://devblogsite.netlify.app) · [**Report Bug »**](https://github.com/nivinvysakh/devlog-astro-template/issues) · [**Request Feature »**](https://github.com/nivinvysakh/devlog-astro-template/issues)
+[**Explore Live Demo »**](https://devblogsite.netlify.app) · [**Official Astro Theme Listing »**](https://portal.astro.build/themes/liquid-glass-blog/) · [**Report Bug »**](https://github.com/nivinvysakh/devlog-astro-template/issues) · [**Request Feature »**](https://github.com/nivinvysakh/devlog-astro-template/issues)
 
 </div>
 
@@ -57,6 +58,8 @@ Crafted with **Astro 7**, **Tailwind CSS 4**, strict **TypeScript**, and a tacti
 ## 🚀 Live Demo & Screenshots
 
 Experience the template live in action at: **[https://devblogsite.netlify.app](https://devblogsite.netlify.app)**
+
+> 🌟 **Official Listing:** This theme is officially featured on the [Astro Themes Directory](https://portal.astro.build/themes/liquid-glass-blog/).
 
 ### 🖼️ UI Showcase
 
